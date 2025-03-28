@@ -29,16 +29,18 @@ if (file_exists(__DIR__ . '/.env')) {
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 /** The name of the database for WordPress */
-define( 'DB_NAME', $env['DB_NAME'] );
+/** The name of the database for WordPress */
+define('DB_NAME', getenv('DB_NAME'));
 
 /** Database username */
-define( 'DB_USER', $env['DB_USER'] );
+define('DB_USER', getenv('DB_USER'));
 
 /** Database password */
-define( 'DB_PASSWORD', $env['DB_PASSWORD'] );
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
 
 /** Database hostname */
-define( 'DB_HOST', $env['DB_HOST'] . ':' . $env['DB_PORT'] );
+define('DB_HOST', getenv('DB_HOST') . ':' . getenv('DB_PORT'));
+
 
 
 /** Database charset to use in creating database tables. */
