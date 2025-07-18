@@ -30,12 +30,24 @@ if (file_exists(__DIR__ . '/.env')) {
 /** The name of the database for WordPress */
 /** The name of the database for WordPress */
 /** The name of the database for WordPress */
-define('DB_NAME', getenv('DB_NAME') ?: 'railway');
-define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_NAME', getenv('DB_NAME'));
+
+/** Database username */
+define('DB_USER', getenv('DB_USER'));
+
+/** Database password */
 define('DB_PASSWORD', getenv('DB_PASSWORD'));
+
+/** Database hostname */
 define('DB_HOST', getenv('DB_HOST') . ':' . getenv('DB_PORT'));
-define('DB_CHARSET', 'utf8mb4');
-define('DB_COLLATE', '');
+
+
+
+/** Database charset to use in creating database tables. */
+define( 'DB_CHARSET', 'utf8mb4' );
+
+/** The database collate type. Don't change this if in doubt. */
+define( 'DB_COLLATE', '' );
 
 
 /**#@+
